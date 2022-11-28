@@ -42,7 +42,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.17.3
 	github.com/aws/aws-sdk-go-v2/service/ec2 v1.54.4
 	github.com/aws/aws-sdk-go-v2/service/kinesis v1.15.19
-	github.com/aws/aws-sdk-go-v2/service/sts v1.17.4
+	github.com/aws/aws-sdk-go-v2/service/sts v1.17.5
 	github.com/aws/aws-sdk-go-v2/service/timestreamwrite v1.14.5
 	github.com/aws/smithy-go v1.13.4
 	github.com/benbjohnson/clock v1.3.0
