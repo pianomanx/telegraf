@@ -56,7 +56,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.16.31
 	github.com/aws/aws-sdk-go-v2/service/cloudwatch v1.45.1
 	github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.50.1
-	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.43.2
+	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.43.3
 	github.com/aws/aws-sdk-go-v2/service/ec2 v1.225.0
 	github.com/aws/aws-sdk-go-v2/service/kinesis v1.35.1
 	github.com/aws/aws-sdk-go-v2/service/sts v1.33.21
@@ -304,7 +304,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/internal/v4a v1.3.25 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.12.3 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/checksum v1.4.6 // indirect
-	github.com/aws/aws-sdk-go-v2/service/internal/endpoint-discovery v1.10.15 // indirect
+	github.com/aws/aws-sdk-go-v2/service/internal/endpoint-discovery v1.10.16 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.12.16 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.18.6 // indirect
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.71.0 // indirect
