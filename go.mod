@@ -57,7 +57,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/cloudwatch v1.45.3
 	github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.54.0
 	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.44.0
-	github.com/aws/aws-sdk-go-v2/service/ec2 v1.231.0
+	github.com/aws/aws-sdk-go-v2/service/ec2 v1.237.0
 	github.com/aws/aws-sdk-go-v2/service/kinesis v1.36.0
 	github.com/aws/aws-sdk-go-v2/service/sts v1.35.0
 	github.com/aws/aws-sdk-go-v2/service/timestreamwrite v1.32.0
