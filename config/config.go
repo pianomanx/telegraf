@@ -296,6 +296,11 @@ type AgentConfig struct {
 	// this setting to true will skip the second run of processors.
 	SkipProcessorsAfterAggregators *bool `toml:"skip_processors_after_aggregators"`
 
+	// Flag to skip running processors before aggregators
+	// By default, processors are run a first time before aggregators. Changing
+	// this setting to true will skip the first run of processors.
+	SkipProcessorsBeforeAggregators bool `toml:"skip_processors_before_aggregators"`
+
 	// Number of attempts to obtain a remote configuration via a URL during
 	// startup. Set to -1 for unlimited attempts.
 	ConfigURLRetryAttempts int `toml:"config_url_retry_attempts"`
@@ -579,10 +584,18 @@ func (c *Config) LoadAll(configFiles ...string) error {
 		}
 	}
 
+	if c.Agent.SkipProcessorsBeforeAggregators && c.Agent.SkipProcessorsAfterAggregators != nil && *c.Agent.SkipProcessorsAfterAggregators {
+		return errors.New("cannot set both skip_processors_before_aggregators and skip_processors_after_aggregators as true")
+	}
+
 	// Sort the processors according to their `order` setting while
 	// using a stable sort to keep the file loading / file position order.
 	sort.Stable(c.Processors)
 	sort.Stable(c.AggProcessors)
+
+	if c.Agent.SkipProcessorsBeforeAggregators {
+		c.Processors = make(models.RunningProcessors, 0)
+	}
 
 	// Set snmp agent translator default
 	if c.Agent.SnmpTranslator == "" {
